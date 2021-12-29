@@ -1,0 +1,49 @@
+<!----------------------A Scary Illusion------------>
+<!DOCTYPE>
+<head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+
+<body>
+
+    <a-assets>
+
+        <a-asset-item id="GT" src="/GT/scene.gltf"></a-asset-item>
+        <a-asset-item id="C8" src="/C8/scene.gltf"></a-asset-item>
+        <a-asset-item id="Countach" src="/Countach/scene.gltf"></a-asset-item>
+        <a-asset-item id="F1" src="/F1/scene.gltf"></a-asset-item>
+
+        <a-asset-item id="USS" src="/Louisiana/scene.gltf"></a-asset-item>
+        <a-asset-item id="Glorious" src="/Glorious/scene.gltf"></a-asset-item>
+        <a-asset-item id="Littoro" src="/Littoro/scene.gltf"></a-asset-item>
+        <a-asset-item id="GeorgeV" src="/GeorgeV/scene.gltf"></a-asset-item>
+        <a-asset-item id="Burke" src="/Burke/scene.gltf"></a-asset-item>
+
+    </a-assets>
+
+   <a-scene fog=" density:0.02;type: exponential; color: #AAA">
+
+        <a-camera position="4.5 23.15 9" wasd-controls-enabled="true" wasd-controls="acceleration:200"></a-camera>
+
+        <a-entity light="type:directional;intensity:0;distance:300;color:white" position="150 30 0"></a-entity>
+        <a-entity light="type:directional;intensity:5;distance:300;color:white" position="-150 30 0"></a-entity>
+
+        <a-entity rotation="0 180 0" position="6 21.5 -7" scale="0.002 0.002 0.002" gltf-model="#GT"></a-entity>
+        <a-entity position="5 21.5 9" scale="1.5 1.5 1.5" gltf-model="#C8"></a-entity>
+        <a-entity position="8 22.5 0" scale="0.8 0.8 0.8" gltf-model="#Countach"></a-entity>
+        <a-entity rotation="0 180 0" position="2 21.5 -8" scale="0.0175 0.0175 0.0175" gltf-model="#F1"></a-entity>
+
+        <a-box animation="property:position;to:21 24 120;loop:true;dur:2000 " position="21 24 -120" width="0.5" height="8"></a-box>
+        <a-box animation="property:position;to:-1 24 120;loop:true;dur:2000 " position="-1 24 -120" width="0.5" height="8"></a-box>
+
+        <a-entity animation="property:position;to:-40 20 -800;loop:true;dur:40000 " rotation="0 180 0" position="-40 20 450" scale="1.5 1.5 1.5" gltf-model="#USS"></a-entity>
+        <a-entity animation="property:position;to:50 17 800;loop:true;dur:80000 " rotation="0 -90 0" position="50 13 -1000" scale="0.75 0.75 0.75" gltf-model="#Littoro"></a-entity>
+        <a-entity animation="property:position;to:50 13 800;loop:true;dur:20000 " rotation="0 0 0" position="50 18 -800" scale="0.5 0.5 0.5" gltf-model="#Burke"></a-entity>
+
+        <a-box color="gray" width="23" height="23" depth="1000" position="10 10 0"></a-box>
+        <a-plane   color="blue" position="0 -0.5 0" width="2000" height="2000" rotation="-90 0 0" ></a-plane>
+        
+   </a-scene>
+    
+</body>
+<!----------------------A Scary Illusion------------>
